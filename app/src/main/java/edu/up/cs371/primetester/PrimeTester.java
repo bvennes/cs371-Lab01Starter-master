@@ -15,6 +15,11 @@ public class PrimeTester {
      */
     public static boolean isPrime(long n) {
         // for now, return a random result
-        return Math.random() > 0.5;
+        for (int a = 2; a < (int) n/2; a++) {
+            if (n%a == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
